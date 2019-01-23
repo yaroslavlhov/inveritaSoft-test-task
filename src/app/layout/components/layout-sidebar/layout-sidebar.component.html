@@ -1,0 +1,14 @@
+<div class="sidebar">
+  <div class="sidebar--logo">
+    <img src="https://assets.foxstone.ch/img/logo.png" alt="foxstone logo">
+  </div>
+  <ul class="sidebar-menu">
+    <li class="sidebar--menu-item" *ngFor="let link of links" >
+      <a [href]="link.path">
+        <i class="fa fa-{{link.icon}}"></i>
+        <span>{{link.title}}</span>
+      </a>
+
+    </li>
+  </ul>
+</div>

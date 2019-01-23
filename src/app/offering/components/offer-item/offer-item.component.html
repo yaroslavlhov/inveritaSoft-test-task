@@ -1,0 +1,38 @@
+<div class="offer" [ngClass]="{completed: isCompleted, large: isBig}">
+  <div class="offer--stripe-container" *ngIf="isCompleted">
+    <div class="offer--stripe">
+      Funded
+    </div>
+  </div>
+  <div class="offer-container">
+      <div class="offer--header">
+          <h3>{{offer.title}}</h3>
+          <h4>{{offer.address_object.city}}, {{offer.address_object.canton}}</h4>
+        </div>
+        <div class="offer--preview" [ngStyle]="{'background-image': geBackgroundImage(offer.mainPhoto.url)}"></div>
+        <div class="offer--info">
+          <div class="offer--finance offer--finance__main">
+            <div class="offer--finance-name">Available to invest</div>
+            <div class="offer--finance-value" *ngIf="!isCompleted">{{formatFinanceValue(offer.financial.available_to_invest,
+              financeRowTypes.currency)}}</div>
+            <div class="offer--finance-value" *ngIf="isCompleted">COMPLETED</div>
+          </div>
+          <div class="offer--progress-container">
+            <div class="offer--progress-bar">
+              <div class="offer--progress" [ngStyle]="{'width': getProgress()}"></div>
+            </div>
+          </div>
+          <div class="offer--seconday-info">
+            <div class="offer--finance" *ngFor="let finance of financialList">
+              <div class="offer--finance-name">{{finance.name}}</div>
+              <div class="offer--finance-value">{{formatFinanceValue(offer.financial[finance.key], finance.type)}}</div>
+            </div>
+          </div>
+          <div class="offer--action-container">
+            <button class="offer--action-button" *ngIf="!isCompleted">MORE DETAILS</button>
+            <button class="offer--action-button" *ngIf="isCompleted">Add me to waiting list</button>
+          </div>
+        </div>
+  </div>
+
+</div>

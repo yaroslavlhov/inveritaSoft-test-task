@@ -1,0 +1,28 @@
+:host, .app {
+  display: block;
+  height: 100%;
+  background: #f5f7fa;
+}
+
+.page{
+  display: block;
+  height: 100%;
+  overflow: auto;
+  padding: 80px 5px 20px 255px;
+  box-sizing: border-box;
+  transition: all 0.3s linear;
+}
+
+@media (max-width: 800px) {
+  .sidebar-closed{
+    app-layout-sidebar{
+      left: -250px;
+    }
+  }
+  .page{
+    padding-left: 5px;
+  }
+  app-layout-header{
+    left: 0;
+  }
+}

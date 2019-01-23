@@ -1,0 +1,10 @@
+<div class="offering">
+  <div *ngIf="offers">
+      <app-offer-item class="big-offer" is-big="true" [offer]="offers[0]"></app-offer-item>
+      <div class="offers-row">
+          <app-offer-item [offer]="offers[1]"></app-offer-item>
+          <app-offer-item [offer]="offers[2]"></app-offer-item>
+          <app-offer-item [offer]="offers[3]"></app-offer-item>
+      </div>
+  </div>
+</div>

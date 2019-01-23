@@ -1,0 +1,7 @@
+<div class="app" [ngClass]="{'sidebar-closed': sidebarClosed}">
+    <app-layout-sidebar></app-layout-sidebar>
+    <app-layout-header (click)="onClickOutsideSidebar()" (clickMenu)="onClickMenu()"></app-layout-header>
+    <div class="page" (click)="onClickOutsideSidebar()">
+      <app-offering></app-offering>
+    </div>
+</div>

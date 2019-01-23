@@ -1,0 +1,44 @@
+:host {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  z-index: 3;
+  background: #1e2b3c;
+  transition: left 0.3s linear;
+}
+
+.sidebar{
+  height: 100%;
+
+  &--logo{
+    margin-bottom: 40px;
+    padding-top: 14px;
+    padding-bottom: 6px;
+    text-align: center;
+    outline: 0;
+    img{
+      max-width: 160px;
+    }
+  }
+
+  &--menu-item{
+    border-top: 1px solid #333f4f;
+    border-bottom: 1px solid #333f4f;
+    display: block;
+    color: #9dacbf;
+    text-transform: uppercase;
+    padding: 25px 0 25px 25px;
+    font-weight: 400;
+    font-size: 1.143em;
+    a{
+      color: #9dacbf;
+      text-decoration: none;
+    }
+    .fa{
+      margin-right: 20px;
+    }
+  }
+}
